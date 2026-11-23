@@ -35,26 +35,30 @@ Aplicação desenvolvida em linguagem C para automatizar a triagem, classificaç
 ### Compilação
 ```bash
 gcc -Wall -Wextra -std=c11 main.c -o clinica
+```
 
 ### Execução
 Linux / macOS:
+```bash
 ./clinica
+```
 
 Windows:
+```bash
 clinica.exe
+```
 
-### Exemplo de Utilização
+## Exemplo de Utilização
 
 Cadastro de pacientes:
 
-**Paciente 1:** Masculino, 30 anos, sem condições especiais → Gera senha N001 **(Normal)**
+- Paciente 1: Masculino, 30 anos, sem condições especiais → Gera senha **`N001` (Normal)**
+- Paciente 2: Feminino, 28 anos, gestante → Gera senha **`P001` (Preferencial)**
+- Paciente 3: Masculino, 85 anos → Gera senha **`U001` (Urgente)**
 
-**Paciente 2:** Feminino, 28 anos, gestante → Gera senha P001 **(Preferencial)**
+Painel exibido antes da chamada:
 
-**Paciente 3:** Masculino, 85 anos → Gera senha U001 **(Urgente)**
-
-Painel Exibido antes da chamada:
-
+```text
 ==========================================
           PAINEL DE ATENDIMENTO
 ==========================================
@@ -62,7 +66,8 @@ Em atendimento: NENHUMA
 Aguardando -> Urgente: 1 | Preferencial: 1 | Normal: 1
 Proximas senhas: U001 P001 N001 
 ==========================================
+```
 
 Ordem de chamada:
 
-Ao escolher a opção 3 **(Chamar próximo)**, o sistema chama U001 **(Urgente)** primeiro, depois P001 **(Preferencial)** ao finalizar **(4)**, e por fim N001 **(Normal)**.
+Ao escolher a opção `3` **(Chamar próximo)**, o sistema chama **`U001` (Urgente)** primeiro, depois **`P001` (Preferencial)** ao finalizar **`(4)`**, e por fim **`N001` (Normal)**.
